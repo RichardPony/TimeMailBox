@@ -21,6 +21,8 @@ page{
   border-radius: 0;
   border:0;
 }
+
+
 /* .nav{
   width: 20%;
 } */
@@ -29,4 +31,25 @@ page{
   width: 75rpx;
   height: 75rpx;
   border: 0;
+}
+.textInput{
+  cursor: auto;
+  width: 320px;
+  height: 350px;
+  margin: 80rpx auto 0 auto;
+  font-size: 13pt;
+  line-height: 20pt;
+}
+.bottom-img{
+  height: 200rpx;
+  margin: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+}
+.bottom-img image{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 10rpx 10rpx 0;
 }

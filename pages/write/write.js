@@ -1,75 +1,36 @@
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-    head_icons:[
-      {
-        key: "图片",
+    textArea: null,
+    imgArr: null,
+    recordPath: null
+  },
+
+  getImg: function(e){
+    let self = this;
+    wx.chooseImage({
+      count:9,
+      sizeType:['album','carema'],
+      success: function(res) {
+        //tempFilePaths可作为img标签的src显示图片
+        self.setData({
+          imgArr:res.tempFilePaths
+        })
       },
-      {
-        key: "录音",
-      },
-      {
-        key:"发送",
+    })
+  },
+  getRecord: function(e){
+    let self = this;
+    wx.startRecord({
+      success: function (res){
+        self.setData({
+          recordPath:res.tempFilePath
+        })
       }
-    ]
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
+    })
+    setTimeout(function(){
+      wx.stopRecord()
+    },10000)
   }
+
 })
