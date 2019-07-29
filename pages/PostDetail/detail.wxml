@@ -1,0 +1,35 @@
+<page>
+  <view style="width: 100%;height: 100%;background-image: url(http://www.bistu520.cn:8000/white.jpg);background-size: 100% 100%">
+    <view class="rec-addr">
+      <view class="detail-icon">
+        <image src="/images/icons/邮件.png" style="width:50rpx;height:50rpx;"></image>
+      </view>
+      <view class="detail-info">
+        <text >收信邮箱：</text>
+      </view>
+      <sc-input sc-class="sc-input" bindinput="addr_input">
+      </sc-input>
+    </view>
+
+    <view class="rec-addr">
+      <view class="detail-icon">
+        <image src="/images/icons/时间.png" style="width:50rpx;height:50rpx;"></image>
+      </view>
+      <view class="detail-info">
+        <text >收信时间：</text>
+      </view>
+      <view class="timeBox">
+      <block wx:for='{{chooseTime}}' wx:key='{{index}}'>
+        <!-- <sc-button sc-class="sc-btn box-shadow-3" style="display: inline-block;margin-right: 16px" bindtap="timeClick">
+                {{item.name}}
+        </sc-button> -->
+         <button class="timeChooserbtn">
+          {{item.name}}
+        </button>
+      </block>
+      </view>
+      <!-- <sc-input sc-class="sc-input" bindinput="addr_input">
+      </sc-input> -->
+    </view>
+  </view>
+</page>

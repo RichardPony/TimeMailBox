@@ -1,4 +1,7 @@
 /**app.wxss**/
+@import "sc-ui/sc-ui.wxss";
+@import "sc-ui/assets/font-icon/material.wxss";
+
 .container {
   height: 100%;
   display: flex;

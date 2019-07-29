@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/publicBox/publicBox",
-    "pages/write/write"
+    "pages/write/write",
+    "pages/PostDetail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

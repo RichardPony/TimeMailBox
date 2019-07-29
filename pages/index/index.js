@@ -50,5 +50,10 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  PostDetail: function(e){
+    wx.navigateTo({
+      url: '/pages/PostDetail/detail',
+    })
   }
 })

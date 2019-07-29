@@ -34,6 +34,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
-  }
+    userInfo: null,
+    baseUrl: "http://127.0.0.1:3000/"
+  },
+  scui: require("sc-ui/sc-ui")
 })
