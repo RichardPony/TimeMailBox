@@ -1,8 +1,8 @@
 const app = getApp();
 Page({
   data: {
-    rec_addr:null,
-    time:null,
+    rec_addr: null,
+    time: null,
     chooseTime:[
       { 'id': '1', 'name': '两个月' },
       { 'id': '2', 'name': '三个月' },
@@ -13,7 +13,8 @@ Page({
     ],
     userDefdate: null,
     btnId: null,
-    isuserDef: false
+    isuserDef: false,
+    notice: "&nbsp;&nbsp;您承诺信件内容符合本程序内容规范及法律法规，不发送垃圾邮件和骚扰信件，并承担发送信件行为的全部责任。"
   },
   
   onReady() {
@@ -32,7 +33,8 @@ Page({
     var btnId = e.currentTarget.dataset.id;
     this.setData({
       btnId: btnId,
-      isuserDef: false
+      isuserDef: false,
+      userDefdate: null
     })
     console.log("按钮：" + this.data.btnId);
   },
@@ -40,8 +42,17 @@ Page({
     this.setData({
       rec_addr: e.detail.value
     })
-    // console.log(this.data.rec_addr)
+  },
+  checkboxChange: function (e) {
+    console.log("选择值：" + e.detail.value)
+  },
+  back_to_write: function(e){
+    console.log("back-to-write")
+    wx.navigateBack({
+    })
+  },
+  post: function(e){
+    console.log("POST!!!")
   }
-
 
 })

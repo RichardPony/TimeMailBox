@@ -1,7 +1,6 @@
 {
   "usingComponents": {
     "sc-input": "/sc-ui/components/scInput/sc-input",
-    "sc-textarea": "/sc-ui/components/scTextarea/sc-textarea",
-    "sc-data-picker":"/sc-ui/components/scDatePicker/sc-date-picker"
+    "sc-textarea": "/sc-ui/components/scTextarea/sc-textarea"
   }
 }

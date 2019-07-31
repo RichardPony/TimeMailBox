@@ -34,5 +34,41 @@
         </view>
       </view>
     </view>
+    <view class="check">
+      <checkbox-group bindchange="checkboxChange" class="checkgroup">
+        <view style="display:flex; align-items:flex-end;">
+          <checkbox value="Y1" checked="true" bindchange="checkboxChange"/>
+          <view style="padding-top:0rpx ">允许放入公开信箱</view>
+        </view>
+      </checkbox-group>
+      <view style="margin-right: 8%; margin-left:3%">
+        <text decode="{{true}}" style="font-size:25rpx;">&nbsp;&nbsp;您的信件将会在某一天匿名，随机出现在公开信箱里。</text>
+      </view>
+    </view>
+    <view class="check">
+      <view style="display:flex; align-items:flex-end;">
+        <checkbox-group bindchange="checkboxChange" style="width:80% display:inline">
+          <checkbox value="Y2" checked="true" bindchange="checkboxChange"/>
+        </checkbox-group>
+        <view style="padding-top:0rpx ">使用须知</view>
+      </view>
+      <!-- <view style="display:inline; position: absolute; right: 6%;" >
+        <image src="/images/icons/问号.png" style="width:40rpx; height: 40rpx;"></image>
+      </view> -->
+      <view style="margin-right: 8%; margin-left:3%">
+        <text decode="{{true}}" style="font-size:25rpx;">{{notice}}</text>
+      </view>
+    </view>
+    <view style="padding-left:5%; padding-top:30rpx;">
+      <text decode="{{true}}" style="font-size:35rpx; color:#8B8B7A">寄出后将不可撤回，不能查找，就此消失。\n希望你也忘记这封信，直到收信那天。</text>
+    </view>
+    <view class="bottom">
+      <image src="/images/icons/返回.png" class="bottom-img" bindtap="back_to_write"></image>
+      <image src="/images/icons/发出.png" class="bottom-img" style="position:absolute; right:8%" bindtap="post"></image>
+    </view>
+    <view class="bottom">
+      <text style="margin-left:2%;">返回</text>
+      <text style="position:absolute; right:9%">发送</text>
+    </view>
   </view>
 </page>

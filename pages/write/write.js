@@ -77,5 +77,8 @@ Page({
         'Content-Type': 'application/x-www-form-urlencoded'
       },
     })
+    wx.navigateTo({
+      url: '/pages/PostDetail/detail',
+    })
   }
 })

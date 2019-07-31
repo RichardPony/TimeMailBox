@@ -20,8 +20,8 @@ page{
 }
 .rec-time{
   width: 90%;
-  height: 250rpx;
-  padding: 40rpx 5% 40rpx 5%;
+  height: 310rpx;
+  padding: 10rpx 5% 16rpx 5%;
 }
 .timeBox
 .timeChooserbtn{
@@ -32,14 +32,52 @@ page{
   height: 72rpx;
   padding: 0 32rpx;
   font-size: 28rpx;
-  border: 5rpx solid silver;
-  border-radius: 10rpx;
+  border: 3rpx solid silver;
+  border-radius: 8rpx;
   background-color: #fff;
-
+  /* box-shadow: 100rpx 3rpx 5rox; */
 }
 .timeChooserbtn.btnSelected{
-  background-color: #c8e8ec;
+  background-color: #d0e7eb;
 }
 .userDefdate{
+  margin-top: -30rpx;
   margin-left: 30rpx;
+}
+.check{
+  width:100%;
+  /* height: 100rpx; */
+  padding:0 5% 20rpx 5%;
+  display: inline-block;
+}
+
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+  width: 32rpx;
+  height: 32rpx;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #836776;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+.bottom{
+  padding: 40rpx 6% 10rpx 6%;
+}
+.bottom-img{
+  width:80rpx;
+  height: 80rpx;
+  display: inline-block;
+  vertical-align: middle;
 }

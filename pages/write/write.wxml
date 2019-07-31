@@ -10,7 +10,7 @@
         <image src="/images/icons/录音.png" class="nav-icon"></image>
       </button>
       <button bindtap="post" class="form_button">
-        <image src="/images/icons/发送.png" class="nav-icon"></image>
+        <image src="/images/icons/send.png" class="nav-icon"></image>  
       </button>
     </view>
     <textarea  maxlength="1000" placeholder="在这里撰写您的信件" auto-focus class="textInput" bindinput="getInputValue"></textarea>
