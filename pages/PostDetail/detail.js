@@ -6,9 +6,9 @@ Page({
     chooseTime:[
       { 'id': '1', 'name': '两个月' },
       { 'id': '2', 'name': '三个月' },
-      { 'id': '3', 'name': '半 年' },
-      { 'id': '4', 'name': '一 年' },
-      { 'id': '5', 'name': '两 年' },
+      { 'id': '3', 'name': '半&nbsp;&nbsp;&nbsp;年' },
+      { 'id': '4', 'name': '一&nbsp;&nbsp;&nbsp;年' },
+      { 'id': '5', 'name': '两&nbsp;&nbsp;&nbsp;年' },
       // { 'id': '6', 'name': '自定义' },
     ],
     userDefdate: null,

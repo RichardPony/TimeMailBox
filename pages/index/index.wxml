@@ -1,14 +1,27 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<page>
+  <view style="width: 100%;height: 100%;background-image: url(http://www.bistu520.cn:8000/bg01.jpg);background-size: 100% 100%">
+    <view class="container">
+      <view class="userinfo">
+        <text class="headline" decode="{{true}}">
+          &nbsp;给&nbsp;自&nbsp;己&nbsp;一&nbsp;个&nbsp;期&nbsp;许，\n&nbsp;给&nbsp;将&nbsp;来&nbsp;一&nbsp;个&nbsp;回&nbsp;忆
+        </text>
+      </view>
+      <view class="text-bg" >
+        <view style="height:150rpx;">
+          <text class="texthead-in-mail">TimeBox</text>
+        </view>
+        <view style="height:80rpx;">
+          <text class="text-in-mail">To Future Me:</text>
+        </view>
+        <view style="height:150rpx;">
+          <text class="detail">见字如面，两年后的你还好吗？\n\n时光又是什么颜色的呢</text>
+        </view>
+        <view style="height:350rpx; text-align: center; margin:auto 0;">
+          <text class="bottom">写下你的第一封信件吧~</text>
+        </view>
+      </view>
+      <!-- <button bindtap="PostDetail">To Detail</button> -->
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <button bindtap="PostDetail">To Detail</button>
-</view>
+</page>

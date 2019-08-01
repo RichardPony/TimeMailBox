@@ -28,8 +28,8 @@ page{
 } */
 .nav-icon{
   display: block;
-  width: 75rpx;
-  height: 75rpx;
+  width: 70rpx;
+  height: 70rpx;
   border: 0;
 }
 .textInput{
@@ -39,6 +39,9 @@ page{
   margin: 80rpx auto 0 auto;
   font-size: 13pt;
   line-height: 20pt;
+  border-radius:20px;
+  border: solid 6rpx rgb(189, 226, 233);
+
 }
 .bottom-img{
   height: 200rpx;

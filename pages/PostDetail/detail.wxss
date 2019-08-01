@@ -38,7 +38,8 @@ page{
   /* box-shadow: 100rpx 3rpx 5rox; */
 }
 .timeChooserbtn.btnSelected{
-  background-color: #d0e7eb;
+  /* background-color: #d0e7eb; */
+  background-color: #a38796;
 }
 .userDefdate{
   margin-top: -30rpx;

@@ -4,10 +4,10 @@
   <view style="width: 100%;height: 100%;background-image: url(http://www.bistu520.cn:8000/white.jpg);background-size: 100% 100%">
     <view class="head">
       <button bindtap="getImg" class="form_button">
-        <image src="/images/icons/图片.png" class="nav-icon"></image>
+        <image src="/images/icons/image.png" class="nav-icon"></image>
       </button>
       <button bindtap="getRecord" class="form_button">
-        <image src="/images/icons/录音.png" class="nav-icon"></image>
+        <image src="/images/icons/record.png" class="nav-icon"></image>
       </button>
       <button bindtap="post" class="form_button">
         <image src="/images/icons/send.png" class="nav-icon"></image>  
