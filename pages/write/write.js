@@ -39,7 +39,6 @@ Page({
           return;
         else
           that.recordDo();
-
       }
     })
   },
@@ -66,7 +65,6 @@ Page({
     wx.setStorageSync('record', this.data.recordPath),
     wx.request({
       url: app.globalData.baseUrl + 'post',
-      
       method: "POST",
       data:{
         textArea: this.data.textArea,

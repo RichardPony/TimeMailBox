@@ -34,9 +34,9 @@
       </view>
     </view>
     <view class="check">
-      <checkbox-group bindchange="checkboxChange" class="checkgroup">
+      <checkbox-group bindchange="changePublic" class="checkgroup">
         <view style="display:flex; align-items:flex-end;">
-          <checkbox value="Y1" checked="true" bindchange="checkboxChange"/>
+          <checkbox value='T' checked="true" bindchange="checkboxChange"/>
           <view style="padding-top:0rpx ">允许放入公开信箱</view>
         </view>
       </checkbox-group>
@@ -46,8 +46,8 @@
     </view>
     <view class="check">
       <view style="display:flex; align-items:flex-end;">
-        <checkbox-group bindchange="checkboxChange" style="width:80% display:inline">
-          <checkbox value="Y2" checked="true" bindchange="checkboxChange"/>
+        <checkbox-group bindchange="changePermit" style="width:80% display:inline">
+          <checkbox value='T' checked="true" bindchange="checkboxChange"/>
         </checkbox-group>
         <view style="padding-top:0rpx ">使用须知</view>
       </view>

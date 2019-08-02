@@ -4,3 +4,33 @@ page{
   background-image: url(http://www.bistu520.cn:8000/bg-public.jpg); 
   background-size: 100% 100%;
 }
+.padding{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2% 6% 0 6%;
+  height: 100%;
+}
+.quantity{
+  width: 80%;
+  text-align: center;
+}
+.publicCard{
+  margin: 16rpx;
+  margin-top: 40rpx;
+  border: 2rpx solid #8691a1;
+  border-radius: 10rpx;
+  box-shadow: 8rpx 4rpx 4rpx #7d8899;
+  position: relative;
+  background-color: #a6b1b1;
+  line-height: 56rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.content{
+  width: 92%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

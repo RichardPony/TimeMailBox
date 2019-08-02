@@ -14,6 +14,8 @@ Page({
     userDefdate: null,
     btnId: null,
     isuserDef: false,
+    public: true,
+    permit: true,
     notice: "&nbsp;&nbsp;您承诺信件内容符合本程序内容规范及法律法规，不发送垃圾邮件和骚扰信件，并承担发送信件行为的全部责任。"
   },
   
@@ -43,16 +45,62 @@ Page({
       rec_addr: e.detail.value
     })
   },
-  checkboxChange: function (e) {
-    console.log("选择值：" + e.detail.value)
+  changePublic: function (e) {
+    this.data.public = true;
+    if(e.detail.value == '')
+      this.data.public = false;
+    console.log("Public选择值：" + this.data.public)
+  },
+  changePermit: function (e) {
+    this.data.permit = true;
+    if (e.detail.value == '')
+      this.data.permit = false;
+    console.log("Permit选择值：" + this.data.permit)
   },
   back_to_write: function(e){
     console.log("back-to-write")
     wx.navigateBack({
     })
   },
+  //发送邮件！
   post: function(e){
     console.log("POST!!!")
+    if(this.data.permit == false)
+    {
+      wx.showModal({
+        title: '使用须知',
+        content: '请先同意使用须知再发送邮件',
+      })
+      return;
+    }
+    console.log("isMail " + this.isMail(this.data.rec_addr))
+    if(!this.isMail(this.data.rec_addr))
+      return;
+    var rec_date = this.data.userDefdate;
+    var choose = this.data.btnId
+    if(choose != '0')
+    {
+      var date = new Date();
+      if(choose == '1')
+        date.setMonth(date.getMonth() + 2);
+      else if(choose == '2')
+        date.setMonth(date.getMonth() + 3);
+      else if(choose == '3')
+        date.setMonth(date.getMonth() + 6);
+      else if(choose == '4')
+        date.setFullYear(date.getFullYear() + 1);
+      else
+        date.setFullYear(date.getFullYear() + 2);
+      rec_date = date.toLocaleDateString();
+      console.log(rec_date)
+    }
+    wx.setStorageSync('mail_addr', this.data.rec_addr);
+    wx.setStorageSync('time', rec_date)
+  },
+  isMail: function(e)
+  {
+    if(e == null)
+      return false;
+    return true;
   }
-
 })

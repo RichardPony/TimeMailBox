@@ -1,3 +1,13 @@
-<view>
-
+<view class="padding">
+  <view class="quantity">
+    <text>小站已经寄出{{amount}}封信~</text>
+  </view>
+  <block wx:for='{{publicData}}' wx:key='{{index}}'>
+    <view class="publicCard">
+      <view class="content">
+        <text style="font-size:38rpx;">寄往{{item.time}} </text>
+        <text style="text-indent: 20rpx; text-align: left;">{{item.content}}</text>
+      </view>
+    </view>
+  </block>
 </view>

@@ -1,7 +1,7 @@
 <page>
   <!-- <image src="../../images/write/white.jpg" class="bg-img">
   </image> -->
-  <view style="width: 100%;height: 100%;background-image: url(http://www.bistu520.cn:8000/white.jpg);background-size: 100% 100%">
+  <view style="width: 100%;height: 100%;">
     <view class="head">
       <button bindtap="getImg" class="form_button">
         <image src="/images/icons/image.png" class="nav-icon"></image>
