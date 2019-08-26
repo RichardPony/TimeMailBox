@@ -102,7 +102,7 @@ Page({
     wx.setStorageSync('mail_addr', this.data.rec_addr);
     wx.setStorageSync('time', rec_date)
     console.log("POST!!!")
-    console.log(this.data.textArea)
+    // console.log(this.data.textArea)
 
     //Post datas to background
     wx.request({
@@ -110,9 +110,8 @@ Page({
       method: "POST",
       data: {
         textArea: this.data.textArea,
-        imgArr: this.data.imgArr,
-        record: this.data.recordPath,
-        mail_addr: this.data.mail_addr
+        mail_addr: this.data.rec_addr,
+        time: rec_date
       },
       header: {
         'Content-Type': 'application/x-www-form-urlencoded'
