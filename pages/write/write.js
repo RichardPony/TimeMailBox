@@ -63,18 +63,6 @@ Page({
     wx.setStorageSync('textArea', this.data.textArea),
     wx.setStorageSync('imgArr', this.data.imgArr),
     wx.setStorageSync('record', this.data.recordPath),
-    wx.request({
-      url: app.globalData.baseUrl + 'post',
-      method: "POST",
-      data:{
-        textArea: this.data.textArea,
-        imgArr: this.data.imgArr,
-        record: this.data.recordPath
-      },
-      header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-    })
     wx.navigateTo({
       url: '/pages/PostDetail/detail',
     })

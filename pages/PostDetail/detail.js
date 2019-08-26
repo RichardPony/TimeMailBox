@@ -64,7 +64,6 @@ Page({
   },
   //发送邮件！
   post: function(e){
-    console.log("POST!!!")
     if(this.data.permit == false)
     {
       wx.showModal({
@@ -94,8 +93,31 @@ Page({
       rec_date = date.toLocaleDateString();
       console.log(rec_date)
     }
+    //get write content
+    this.setData({
+      textArea: wx.getStorageSync('textArea'),
+      imgArr: wx.getStorageSync('imgArr'),
+      record: wx.getStorageSync('record')
+    })
     wx.setStorageSync('mail_addr', this.data.rec_addr);
     wx.setStorageSync('time', rec_date)
+    console.log("POST!!!")
+    console.log(this.data.textArea)
+
+    //Post datas to background
+    wx.request({
+      url: app.globalData.baseUrl + 'post',
+      method: "POST",
+      data: {
+        textArea: this.data.textArea,
+        imgArr: this.data.imgArr,
+        record: this.data.recordPath,
+        mail_addr: this.data.mail_addr
+      },
+      header: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+    })
   },
   isMail: function(e)
   {
