@@ -38,7 +38,7 @@ page{
   cursor: auto;
   width: 320px;
   height: 350px;
-  margin: 80rpx auto 0 auto;
+  margin: 60rpx auto 0 auto;
   font-size: 13pt;
   line-height: 20pt;
   border-radius:20px;

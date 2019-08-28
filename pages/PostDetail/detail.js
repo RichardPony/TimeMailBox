@@ -105,17 +105,28 @@ Page({
     // console.log(this.data.textArea)
 
     //Post datas to background
-    wx.request({
-      url: app.globalData.baseUrl + 'post',
-      method: "POST",
-      data: {
-        textArea: this.data.textArea,
-        mail_addr: this.data.rec_addr,
-        time: rec_date
+    // wx.request({
+    //   url: app.globalData.baseUrl + 'post',
+    //   method: "POST",
+    //   data: {
+    //     textArea: this.data.textArea,
+    //     mail_addr: this.data.rec_addr,
+    //     time: rec_date
+    //   },
+    //   header: {
+    //     'Content-Type': 'application/x-www-form-urlencoded'
+    //   },
+    // })
+    wx.uploadFile({
+      url: app.globalData.baseUrl + 'download',
+      filePath: this.data.imgArr[0],
+      name: 'File',
+      formData:{
+        'user': 'test'
       },
-      header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
+      success (res){
+        console.log("Upload Successfully!")
+      }
     })
   },
   isMail: function(e)
